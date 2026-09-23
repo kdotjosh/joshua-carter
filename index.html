@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko"><head><meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JOSHUA CARTER® — ONLINE SHOP</title>
+<style>
+*{box-sizing:border-box}html,body{margin:0;min-height:100%;background:#050505;color:#111}
+body{font-family:"Courier New",Courier,monospace;overflow-x:hidden}
+.noise{position:fixed;inset:0;pointer-events:none;z-index:30;opacity:.12;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.28'/%3E%3C/svg%3E")}
+.top{position:relative;z-index:2;margin:18px auto 10px;width:min(1160px,94vw);border:3px solid #ddd;background:#eee;box-shadow:6px 6px 0 #000,inset 0 0 0 2px #777}
+.bar{background:#29387f;color:#fff;padding:8px 12px;font-size:13px;letter-spacing:2px;border-bottom:3px solid #111}
+.nav{display:flex;justify-content:space-between;align-items:center;padding:10px 12px;background:#ddd;font-size:12px}
+.nav a{color:#111;text-decoration:none;margin-right:18px}.nav a:hover{background:#111;color:#fff}
+.logo{font-size:16px;font-weight:bold}.grid{position:relative;z-index:2;width:min(1160px,94vw);margin:22px auto 50px;display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{background:#d8d8d8;border:3px solid #eee;box-shadow:6px 6px 0 #000,inset 0 0 0 2px #777;padding:0 14px 14px}
+.title{margin:0 -14px 10px;background:#29387f;color:#fff;padding:8px 10px;font-size:13px;letter-spacing:1.2px;border-bottom:3px solid #111;position:relative;min-height:48px}
+.close{position:absolute;right:6px;top:6px;width:24px;height:24px;border:2px solid #555;background:#ddd;color:#111;font:18px "Times New Roman",serif}
+.price{font-size:17px;letter-spacing:1px;color:#f5f5f5;text-shadow:1px 1px #555;margin:8px 0 20px}
+.product-image{aspect-ratio:4/5;background:#999;border:3px solid #111;box-shadow:inset 0 0 0 3px #ccc;display:flex;align-items:center;justify-content:center;overflow:hidden;position:relative}
+.fake-photo{width:100%;height:100%;background:linear-gradient(135deg,#777,#bdbdbd 48%,#8c8c8c);display:flex;align-items:center;justify-content:center;color:#222;font-size:14px;text-align:center;filter:grayscale(1) contrast(.85)}
+.sold{margin:-68px 0 30px 18px;position:relative;z-index:3;display:inline-block;padding:7px 9px;background:#eee;border:3px solid #111;font-size:13px;box-shadow:3px 3px 0 #000}.sold:before{content:"☒ "}
+.btn,.info{width:100%;height:48px;margin-top:9px;background:#ddd;border:3px solid #111;box-shadow:inset 0 0 0 2px #eee;cursor:pointer;font-family:"Courier New",monospace}.btn{font-size:14px}.info{font-size:12px}.btn:hover,.info:hover{background:#222;color:#fff}
+.footer{position:relative;z-index:2;width:min(1160px,94vw);margin:0 auto 25px;background:#ddd;border:3px solid #eee;box-shadow:5px 5px 0 #000;padding:14px;font-size:11px;display:flex;justify-content:space-between}
+.footer a{color:#111;text-decoration:none}.footer a:hover{background:#111;color:#fff}
+@media(max-width:800px){.grid{grid-template-columns:1fr}.footer{gap:10px;flex-direction:column}}
+</style>
+</head>
+<body>
+<div class="noise"></div>
+<header class="top">
+<div class="bar">09-24 / WEBSITE OUT NOW! STAY TUNED FOR PRE-ORDER ;)</div>
+<div class="nav"><div><a href="#">SHOP</a><a href="#about">ABOUT</a><a href="#contact">CONTACT</a></div><div class="logo">joshua carter ®</div></div>
+</header>
+<main class="grid">
+<article class="card"><div class="title">JOSHUA CARTER HALFTONE WHITE TEE<button class="close">×</button></div><div class="price">₩19,900 KRW</div><div class="product-image"><div class="fake-photo">NOT READY YET!<br></div></div><div class="sold">SOLD OUT</div><button class="btn">CHOOSE OPTIONS</button><button class="info">MORE INFO</button></article>
+<article class="card"><div class="title">JOSHUA CARTER ANALOG LONG SLEEVE<button class="close">×</button></div><div class="price">₩24,900 KRW</div><div class="product-image"><div class="fake-photo">NOT READY YET!<br></div></div><div class="sold">SOLD OUT</div><button class="btn">CHOOSE OPTIONS</button><button class="info">MORE INFO</button></article>
+<article class="card"><div class="title">JOSHUA CARTER CLASSIC HOODIE<button class="close">×</button></div><div class="price">₩49,900 KRW</div><div class="product-image"><div class="fake-photo">NOT READY YET!<br></div></div><div class="sold">SOLD OUT</div><button class="btn">CHOOSE OPTIONS</button><button class="info">MORE INFO</button></article>
+</main>
+<section class="footer" id="about"><span>JOSHUA CARTER® — STREET FASHION / SPORTSWEAR</span><span id="contact"><a href="https://www.instagram.com/j0shuacarter/" target="_blank" rel="noopener noreferrer">INSTAGRAM ↗</a></span></section>
+
+</body></html>
