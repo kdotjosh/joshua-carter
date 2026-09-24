@@ -5,9 +5,9 @@
       "id": "halftone-white-tee",
       "name": "JOSHUA CARTER HALFTONE WHITE TEE",
       "price": 19900,
-      "stock": 0,
-      "soldOut": true,
-      "description": "A clean everyday tee built around the JOSHUA CARTER halftone graphic. Simple, direct, and made to move from the street to wherever the day takes you.",
+      "stock": 50,
+      "soldOut": false,
+      "description": "A white tee perfect for daily wear across all seasons. Experience the fusion of the signature JOSHUA CARTER logo and a halftone style.\n\n- Standard fit: easy and traditional\n- Cotton 100%\n- Made in: Bangladesh",
       "images": [
         "assets/products/halftone-white-tee-1790271961176-y94ad.png",
         "assets/products/halftone-white-tee-1790271984518-aqglq.png"
