@@ -58,11 +58,13 @@
     {
       "id": "new-joshua-carter-design-17902698489486",
       "name": "NEW JOSHUA CARTER DESIGN",
-      "price": 0,
-      "stock": 12,
+      "price": 12000,
+      "stock": 10,
       "soldOut": false,
       "description": "testtt",
-      "images": []
+      "images": [
+        "assets/products/new-joshua-carter-design-17902698489486-1790270307964-ecztl.png"
+      ]
     }
   ]
 }
