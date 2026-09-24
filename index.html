@@ -24,8 +24,15 @@ body{font-family:"Courier New",Courier,monospace;overflow-x:hidden}
 .footer a{color:#111;text-decoration:none}.footer a:hover{background:#111;color:#fff}
 @media(max-width:800px){.grid{grid-template-columns:1fr}.footer{gap:10px;flex-direction:column}}
 </style>
-</head>
-<body>
+<style>
+#gate{position:fixed;inset:0;z-index:99999;background:#fff;color:#111;display:flex;align-items:center;justify-content:center;font-family:"Courier New",monospace}
+#gatebox{width:min(420px,88vw);text-align:center}.gatelogo{font-size:38px;font-weight:900;margin-bottom:38px}
+#pw{width:100%;height:50px;padding:0 14px;border:2px solid #111;font:14px "Courier New",monospace;outline:none}
+#enter{width:100%;height:50px;margin-top:12px;background:#111;color:#fff;border:2px solid #111;font:700 14px "Courier New",monospace;cursor:pointer}
+#status{min-height:20px;margin-top:16px;font-size:13px;font-weight:bold}.bad{color:#d00}.good{color:#008c35}
+body.locked{overflow:hidden}
+</style></head>
+<body><div id="gate"><div id="gatebox"><div class="gatelogo">joshua carter ®</div><form id="pf"><input id="pw" type="password" placeholder="Enter the password" autocomplete="off"><button id="enter">ENTER</button></form><div id="status"></div></div></div>
 <div class="noise"></div>
 <header class="top">
 <div class="bar">09-24 / WEBSITE OUT NOW! STAY TUNED FOR PRE-ORDER ;)</div>
@@ -38,4 +45,6 @@ body{font-family:"Courier New",Courier,monospace;overflow-x:hidden}
 </main>
 <section class="footer" id="about"><span>JOSHUA CARTER® — STREET FASHION / SPORTSWEAR</span><span id="contact"><a href="https://www.instagram.com/j0shuacarter/" target="_blank" rel="noopener noreferrer">INSTAGRAM ↗</a></span></section>
 
-</body></html>
+<script>
+(()=>{const PASSWORD="JOSHUA",DELAY=2500,g=document.getElementById("gate"),f=document.getElementById("pf"),p=document.getElementById("pw"),s=document.getElementById("status");document.body.classList.add("locked");f.onsubmit=e=>{e.preventDefault();if(p.value===PASSWORD){s.className="good";s.textContent="ACCESS GRANTED: loading...";p.disabled=true;document.getElementById("enter").disabled=true;setTimeout(()=>{g.remove();document.body.classList.remove("locked")},DELAY)}else{s.className="bad";s.textContent="ACCESS DENIED: Wrong password";p.value="";p.focus()}}})();
+</script></body></html>
