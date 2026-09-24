@@ -8,61 +8,9 @@
       "stock": 0,
       "soldOut": true,
       "description": "A clean everyday tee built around the JOSHUA CARTER halftone graphic. Simple, direct, and made to move from the street to wherever the day takes you.",
-      "images": []
-    },
-    {
-      "id": "analog-long-sleeve",
-      "name": "JOSHUA CARTER ANALOG LONG SLEEVE",
-      "price": 24900,
-      "stock": 0,
-      "soldOut": true,
-      "description": "An analog-inspired long sleeve with a clean, understated attitude. Designed for everyday wear without losing the character of JOSHUA CARTER.",
-      "images": []
-    },
-    {
-      "id": "classic-hoodie",
-      "name": "JOSHUA CARTER CLASSIC HOODIE",
-      "price": 49900,
-      "stock": 0,
-      "soldOut": true,
-      "description": "Designed for everyday movement. A clean silhouette made for the street, the court, and everything in between.",
-      "images": []
-    },
-    {
-      "id": "design-04",
-      "name": "JOSHUA CARTER DESIGN 04",
-      "price": 29900,
-      "stock": 0,
-      "soldOut": true,
-      "description": "A graphic-driven piece built around the JOSHUA CARTER visual language. Easy to wear, easy to make your own.",
-      "images": []
-    },
-    {
-      "id": "design-05",
-      "name": "JOSHUA CARTER DESIGN 05",
-      "price": 34900,
-      "stock": 0,
-      "soldOut": true,
-      "description": "A straightforward everyday piece with a distinct JOSHUA CARTER identity. Designed to fit naturally into both streetwear and sportswear.",
-      "images": []
-    },
-    {
-      "id": "design-06",
-      "name": "JOSHUA CARTER DESIGN 06",
-      "price": 39900,
-      "stock": 0,
-      "soldOut": true,
-      "description": "A new take on the JOSHUA CARTER aesthetic, keeping the design clean while giving the piece its own character.",
-      "images": []
-    },
-    {
-      "id": "new-joshua-carter-design-17902698489486",
-      "name": "NEW JOSHUA CARTER DESIGN",
-      "price": 12000,
-      "stock": 10,
-      "soldOut": false,
-      "description": "testtt",
-      "images": []
+      "images": [
+        "assets/products/halftone-white-tee-1790271478071-dtt1t.png"
+      ]
     }
   ]
 }
