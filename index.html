@@ -141,7 +141,7 @@ body.modal-open{overflow:hidden}
 .aboutContact{background:#eee;border:2px solid #777;padding:14px;box-shadow:3px 3px 0 #000;color:#111;text-decoration:none;font-size:11px}
 .galleryFolders{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
 .folderBtn{appearance:none;border:3px solid #777;background:#ccc;color:#111;min-height:180px;padding:18px 14px;box-shadow:5px 5px 0 #000;cursor:pointer;text-align:left;font:13px "Courier New",monospace;position:relative}
-.folderBtn:before{content:"";display:block;width:48%;height:18px;background:#aaa;border:2px solid #777;border-bottom:0;position:absolute;left:-3px;top:-21px}
+.folderBtn:before{content:"";display:block;width:48%;height:18px;background:#aaa;border:2px solid #777;border-bottom:0;position:absolute;left:-3px;top:-21px}.folderBtn .folderContent{position:relative;z-index:1;text-align:left}
 .folderName{display:block;margin-top:32px;font-size:15px;letter-spacing:1px}
 .folderHint{display:block;margin-top:12px;font-size:10px;color:#555}
 .galleryView{display:none}.galleryView.open{display:block}
@@ -167,8 +167,8 @@ body{width:100%;min-width:0}
 .nav .menu{min-width:0;display:flex;align-items:center;flex-wrap:wrap}
 .nav .navRight{min-width:0}
 #pageView{margin-top:22px;margin-bottom:50px}
-.analogPage{width:100%;min-width:0;overflow:hidden}
-.analogHead{width:100%;min-width:0;box-sizing:border-box}
+.analogPage{width:auto;min-width:0;overflow:hidden;box-sizing:border-box}
+.analogHead{width:auto;min-width:0;box-sizing:border-box}
 .galleryFolders{width:100%;align-items:stretch}
 .folderBtn{width:100%;min-width:0}
 .galleryEmpty{grid-column:1 / -1;width:100%;min-width:0;margin:0;justify-self:stretch;align-self:stretch;display:flex;align-items:center;justify-content:center;text-align:center}
@@ -179,8 +179,8 @@ body{width:100%;min-width:0}
 .galleryControls{width:100%;min-width:0;display:flex;align-items:center;justify-content:center}
 .galleryControls button{width:42px;height:42px;padding:0;display:flex;align-items:center;justify-content:center;flex:0 0 42px}
 .galleryCounter{min-width:80px}
-.analogX{display:block;width:28px;height:28px;line-height:24px;text-align:center;padding:0;border:0;background:transparent;color:#111;font:24px/24px "Times New Roman",serif;cursor:default;user-select:none;box-sizing:border-box}
-.analogHead .analogX{position:absolute;right:10px;top:50%;transform:translateY(-50%)}
+.analogX{display:block;width:32px;height:32px;line-height:28px;text-align:center;padding:0;border:2px solid #555;background:#ddd;color:#111;font:20px/28px "Times New Roman",serif;cursor:default;user-select:none;box-sizing:border-box}
+.analogHead .analogX{position:absolute;right:8px;top:50%;transform:translateY(-50%);margin:0;z-index:2}
 .aboutInner{width:100%;max-width:900px;box-sizing:border-box}
 .aboutContacts{width:100%}
 .aboutContact{min-width:0;overflow-wrap:anywhere}
@@ -190,7 +190,7 @@ body{width:100%;min-width:0}
   .top,.footer,#pageView{width:calc(100% - 24px)}
   #pageView{margin-top:16px;margin-bottom:36px}
   .analogPage{padding:16px}
-  .analogHead{margin:-16px -16px 16px;width:calc(100% + 32px)}
+  .analogHead{margin:-16px -16px 16px;width:auto}
   .galleryFolders{gap:14px}
   .galleryControls{gap:12px}
   .galleryControls button{width:40px;height:40px;flex-basis:40px}
@@ -206,7 +206,7 @@ body{width:100%;min-width:0}
   .galleryPhoto img{max-height:58vh}
   .galleryControls{gap:10px}
   .galleryControls button{width:38px;height:38px;flex-basis:38px}
-  .analogX{width:26px;height:26px;font-size:22px;line-height:22px}
+  .analogX{width:28px;height:28px;font-size:19px;line-height:24px}
   .analogHead .analogX{right:8px}
   .footer{padding:12px;gap:8px}
 }
@@ -215,7 +215,7 @@ body{width:100%;min-width:0}
   .nav .menu{gap:0 10px}
   .nav a.navLink{font-size:11px}
   .analogPage{padding:12px}
-  .analogHead{margin:-12px -12px 12px;width:calc(100% + 24px)}
+  .analogHead{margin:-12px -12px 12px;width:auto}
 }
 </style>
 </head>
@@ -367,9 +367,10 @@ body{width:100%;min-width:0}
       <div class="aboutBlock"><h3>${escapeHTML(t('contact'))}</h3><div class="aboutContacts"><a class="aboutContact" href="https://www.instagram.com/j0shuacarter/" target="_blank" rel="noopener noreferrer">${escapeHTML(t('instagram'))} ↗<br><span>@j0shuacarter</span></a><a class="aboutContact" href="mailto:joshua.carter.brand@gmail.com">${escapeHTML(t('email'))} ↗<br><span>joshua.carter.brand@gmail.com</span></a></div></div>
     </div></section>`;
   }
+  function formatFolderDate(v){const d=new Date(v);if(!v||isNaN(d.getTime()))return "-- -- ----";const mm=String(d.getMonth()+1).padStart(2,"0"),dd=String(d.getDate()).padStart(2,"0"),yy=d.getFullYear();return `${mm}-${dd}-${yy}`}
   function renderSiteGallery(){
     const folders=galleryData.folders||[];
-    galleryPage.innerHTML=`<section class="analogPage"><div class="analogHead">${escapeHTML(t('gallery'))}<span class="analogX" aria-hidden="true">×</span></div><div class="galleryFolders" id="galleryFolders">${folders.length?folders.map((f,i)=>{const n=pickLang(f.name,'UNTITLED');const count=(f.images||[]).length;return `<button class="folderBtn" type="button" data-folder="${i}"><span class="folderName">${escapeHTML(n)}</span><span class="folderHint">${count} ${escapeHTML(t('images'))}</span></button>`}).join(''):`<div class="galleryEmpty">${escapeHTML(t('nothing'))}</div>`}</div><div class="galleryView" id="galleryView"></div></section>`;
+    galleryPage.innerHTML=`<section class="analogPage"><div class="analogHead">${escapeHTML(t('gallery'))}<span class="analogX" aria-hidden="true">×</span></div><div class="galleryFolders" id="galleryFolders">${folders.length?folders.map((f,i)=>{const n=pickLang(f.name,'UNTITLED');const count=(f.images||[]).length;return `<button class="folderBtn" type="button" data-folder="${i}"><span class="folderContent"><span class="folderName">${escapeHTML(n)}</span><span class="folderHint">${count} ${escapeHTML(t('images'))}</span></span><span class="folderDates">CREATED ${formatFolderDate(f.createdAt)}<br>UPDATED ${formatFolderDate(f.updatedAt||f.createdAt)}</span></button>`}).join(''):`<div class="galleryEmpty">${escapeHTML(t('nothing'))}</div>`}</div><div class="galleryView" id="galleryView"></div></section>`;
     galleryPage.querySelectorAll('[data-folder]').forEach(b=>b.addEventListener('click',()=>openGalleryFolder(Number(b.dataset.folder))));
   }
   function openGalleryFolder(index){
