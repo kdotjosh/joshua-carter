@@ -1,3 +1,6 @@
 {
-  "announcement": "09-28 / PRE-ORDER VIA DM !"
+  "announcement": {
+    "en": "09-28 / PRE-ORDER VIA DM !",
+    "ko": "09-28 / DM을 통해 사전 주문하세요 !"
+  }
 }
