@@ -1,4 +1,24 @@
 {
   "version": 1,
-  "folders": []
+  "folders": [
+    {
+      "id": "test1-17903592607250",
+      "name": {
+        "en": "test1",
+        "ko": "테스트1"
+      },
+      "images": [
+        "assets/gallery/test1-1790359255904-krkan.jpg",
+        "assets/gallery/test1-1790359258654-s9xvx.png"
+      ]
+    },
+    {
+      "id": "test2-17903592607251",
+      "name": {
+        "en": "test2",
+        "ko": "테스트2"
+      },
+      "images": []
+    }
+  ]
 }
