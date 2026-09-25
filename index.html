@@ -336,14 +336,14 @@ body{width:100%;min-width:0}
   const gateMsg=$('gateMsg'), gateFoot=$('gateFoot'), pw=$('pw'), enter=$('enter');
   if(lang==='ko'){
     document.documentElement.lang='ko';
-    gateMsg.textContent='joshua에게 비밀번호를 받았거나 예외 대상에 해당하는 경우 얼리 액세스가 가능합니다.';
+    gateMsg.textContent='비밀번호를 제공받았거나 특별한 사항에 해당하는 경우, 사이트 입장이 가능합니다.';
     pw.placeholder='비밀번호'; pw.setAttribute('aria-label','비밀번호'); enter.textContent='입장하기';
     gateFoot.innerHTML='© 2026, joshua carter®. <br>사전 허가 없이 본 콘텐츠의 일부 또는 전부를 복제, 배포, 전송할 수 없습니다.';
   }else{
     document.documentElement.lang='en';
     gateMsg.textContent='You can early access if you have received a password from joshua or if an exception applies.';
     pw.placeholder='Password'; pw.setAttribute('aria-label','Password'); enter.textContent='ENTER NOW';
-    gateFoot.innerHTML='© 2026, joshua carter®.<br>All rights reserved. No part of this publication may be reproduced, distributed, or transmitted in any form without prior permission.';
+    gateFoot.innerHTML='© 2026, joshua carter®.<br>All rights reserved. 사전 허가 없이 본 자료의 어떠한 부분도 어떠한 형태로든 복제, 배포를 금합니다.';
   }
   const t=k=>UI[lang]?.[k]||UI.en[k]||k;
   function applyLanguage(){
