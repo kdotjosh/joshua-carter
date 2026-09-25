@@ -1,26 +1,4 @@
 {
   "version": 1,
-  "folders": [
-    {
-      "id": "testing-folder1-17903586951920",
-      "name": {
-        "en": "testing folder1",
-        "ko": "테스팅 폴더2"
-      },
-      "images": []
-    },
-    {
-      "id": "pictures-17903586951921",
-      "name": {
-        "en": "pictures",
-        "ko": "사진들"
-      },
-      "images": [
-        "assets/gallery/pictures-1790358690287-2ehr5.jpg",
-        "assets/gallery/pictures-1790358692917-2vn8o.png",
-        "assets/gallery/pictures-1790358989350-l1sg6.jpg",
-        "assets/gallery/pictures-1790358991850-mil3e.png"
-      ]
-    }
-  ]
+  "folders": []
 }
