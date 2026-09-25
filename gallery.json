@@ -1,15 +1,4 @@
 {
   "version": 1,
-  "folders": [
-    {
-      "id": "new-gallery-folder-17903578080380",
-      "name": {
-        "en": "NEW GALLERY FOLDER",
-        "ko": "test"
-      },
-      "images": [
-        "assets/gallery/new-gallery-folder-1790357918186-polwc.png"
-      ]
-    }
-  ]
+  "folders": []
 }
