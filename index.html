@@ -394,8 +394,8 @@ g=document.getElementById("gate"),f=document.getElementById("pf"),p=document.get
 if(document.documentElement.classList.contains("unlocked")){g.remove();return}
 document.body.classList.add("locked");
 f.onsubmit=e=>{e.preventDefault();
-if(p.value!==PASSWORD){s.className="bad";s.textContent=T().accessDenied;p.value="";p.focus();return}
-s.className="good";s.textContent=T().accessGranted;p.disabled=true;btn.disabled=true;
+if(p.value!==PASSWORD){s.className="bad";s.textContent=(localStorage.getItem("jc_lang")==="ko"?"ACCESS DENIED: 잘못된 비밀번호":"ACCESS DENIED: Wrong password");p.value="";p.focus();return}
+s.className="good";s.textContent=(localStorage.getItem("jc_lang")==="ko"?"ACCESS GRANTED: loading...":"ACCESS GRANTED: loading...");p.disabled=true;btn.disabled=true;
 let saved=false;try{localStorage.setItem(KEY,String(Date.now()));saved=!!localStorage.getItem(KEY)}catch(err){}
 setTimeout(()=>{
 if(saved){location.reload()}
