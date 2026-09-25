@@ -338,12 +338,12 @@ body{width:100%;min-width:0}
     document.documentElement.lang='ko';
     gateMsg.textContent='비밀번호를 제공받았거나 특별한 사항에 해당하는 경우, 사이트 입장이 가능합니다.';
     pw.placeholder='비밀번호'; pw.setAttribute('aria-label','비밀번호'); enter.textContent='입장하기';
-    gateFoot.innerHTML='© 2026, joshua carter®. <br>사전 허가 없이 본 콘텐츠의 일부 또는 전부를 복제, 배포, 전송할 수 없습니다.';
+    gateFoot.innerHTML='© 2026, joshua carter®. <br>All rights reserved. 사전 허가 없이 본 자료의 어떠한 부분도 어떠한 형태로든 복제, 배포를 금합니다.';
   }else{
     document.documentElement.lang='en';
     gateMsg.textContent='You can early access if you have received a password from joshua or if an exception applies.';
     pw.placeholder='Password'; pw.setAttribute('aria-label','Password'); enter.textContent='ENTER NOW';
-    gateFoot.innerHTML='© 2026, joshua carter®.<br>All rights reserved. 사전 허가 없이 본 자료의 어떠한 부분도 어떠한 형태로든 복제, 배포를 금합니다.';
+    gateFoot.innerHTML='© 2026, joshua carter®.<br>All rights reserved. No part of this publication may be reproduced, distributed, or transmitted in any form without prior permission.';
   }
   const t=k=>UI[lang]?.[k]||UI.en[k]||k;
   function applyLanguage(){
@@ -476,8 +476,8 @@ g=document.getElementById("gate"),f=document.getElementById("pf"),p=document.get
 if(document.documentElement.classList.contains("unlocked")){g.remove();return}
 document.body.classList.add("locked");
 f.onsubmit=e=>{e.preventDefault();
-if(p.value!==PASSWORD){s.className="bad";s.textContent=(document.documentElement.lang==='ko'?"접근 거부: 비밀번호가 틀렸습니다.":"ACCESS DENIED: Wrong password");p.value="";p.focus();return}
-s.className="good";s.textContent=(document.documentElement.lang==='ko'?"접근 승인: 로딩 중...":"ACCESS GRANTED: loading...");p.disabled=true;btn.disabled=true;
+if(p.value!==PASSWORD){s.className="bad";s.textContent=(document.documentElement.lang==='ko'?"ACCESS DENIED: 비밀번호가 틀렸습니다.":"ACCESS DENIED: Wrong password");p.value="";p.focus();return}
+s.className="good";s.textContent=(document.documentElement.lang==='ko'?"ACCESS GRANTED: 로딩 중...":"ACCESS GRANTED: loading...");p.disabled=true;btn.disabled=true;
 let saved=false;try{localStorage.setItem(KEY,String(Date.now()));saved=!!localStorage.getItem(KEY)}catch(err){}
 setTimeout(()=>{
 if(saved){location.reload()}
