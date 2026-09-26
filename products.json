@@ -18,6 +18,23 @@
         "assets/products/halftone-white-tee-1790271961176-y94ad.png",
         "assets/products/halftone-white-tee-1790271984518-aqglq.png"
       ]
+    },
+    {
+      "id": "joshua-nametag-grey-hoodie-17904329579371",
+      "name": {
+        "en": "JOSHUA NAMETAG GREY HOODIE",
+        "ko": "JOSHUA 네임태그 회색 후드티"
+      },
+      "price": 59900,
+      "stock": 0,
+      "soldOut": true,
+      "description": {
+        "en": "",
+        "ko": ""
+      },
+      "images": [
+        "assets/products/joshua-nametag-grey-hoodie-1790432955043-scrdp.png"
+      ]
     }
   ]
 }
