@@ -48,6 +48,7 @@ html.unlocked #gate{display:none!important}
 @media(max-width:340px){#pf{flex-direction:column}#pw{flex:none;width:100%}#enter{width:100%}}
 </style><script>
 try{var t=parseInt(localStorage.getItem("jc_access"),10),n=Date.now();if(t&&t<=n&&n-t<36e5)document.documentElement.className="unlocked"}catch(e){}
+if(document.documentElement.className!=="unlocked"){try{var xhr=new XMLHttpRequest();xhr.open("GET","site-config.json?"+Date.now(),false);xhr.send(null);if(xhr.status>=200&&xhr.status<300){var cfg=JSON.parse(xhr.responseText);if(cfg&&cfg.gateEnabled===false)document.documentElement.className="unlocked"}}catch(e){}}
 </script>
 <style>
 /* OPTION WINDOW */
